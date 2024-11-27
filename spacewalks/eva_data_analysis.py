@@ -11,8 +11,6 @@ graph_file = 'cumulative_eva_grapth.png'
 
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
-#data_file = []
-
 print("--START--")
 print(f'Reading JSON file {input_file}')
 # Read the data from a JSON file into a Pandas dataframe
@@ -22,9 +20,6 @@ eva_df['eva'] = eva_df['eva'].astype(float)
 eva_df.dropna(axis=0, inplace=True)
 eva_df.sort_values('date', inplace=True)
 
-'''
-w=csv.writer(output_file)
-'''
 print(f'Saving to CSV file {output_file}')
 # Save dataframe to CSV file for later analysis
 eva_df.to_csv(output_file, index=False)
