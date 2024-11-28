@@ -123,5 +123,5 @@ if __name__ == "__main__":
         input_file = sys.argv[1]
         output_file = sys.argv[2]
         
-    graph_file = 'cumulative_eva_graph.png'
+    graph_file = 'figures/cumulative_eva_graph.png'
     main(input_file, output_file, graph_file)
