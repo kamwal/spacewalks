@@ -1,3 +1,6 @@
+# MIT Licence
+#
+# Copyright (c) 2024 Kamila Walicka
 import matplotlib.pyplot as plt
 import pandas as pd
 import sys
