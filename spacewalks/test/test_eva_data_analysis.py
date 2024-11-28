@@ -33,15 +33,13 @@ def test_calculate_crew_size (): # FIXME
     assert actual_result == expected_result
 
 # Edge cases
-def test_calculate_crew_size_edge_cases(): # FIXME
+def test_calculate_crew_size_edge_cases():
     """
-    Test that check that there is no crew present  #FIXME
+    Test that calculate_crew_size returns expected ground truth values
+    for edge case where crew is an empty string
     """
-
-    # Typical value 1
-    actual_result =  test_calculate_crew_size_edge_cases("")#FIXME
-    #expected_result = 0 #FIXME
-    assert actual_result == None
+    actual_result = calculate_crew_size("")
+    assert actual_result is None
 
 test_text_to_duration_float()
 test_text_to_duration_integer()
