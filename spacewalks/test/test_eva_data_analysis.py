@@ -15,22 +15,33 @@ def test_text_to_duration_integer():
     """
     assert text_to_duration("10:00") == 10
 
-
-def test_calculate_crew_size (): # FIXME
+# refactor version
+def test_calculate_crew_size():
     """
-    Test that the code is calulating the number of the crew size.
-      It is checking what particular crue member is on board#FIXME
+    Test that calculate_crew_size returns expected ground truth values
+    for typical crew values
     """
-
-    # Typical value 1
-    actual_result = calculate_crew_size("Mike Collins;") #FIXME
-    expected_result = 1 #FIXME
+    actual_result = calculate_crew_size("Valentina Tereshkova;")
+    expected_result = 1
     assert actual_result == expected_result
 
-    # Typical value 2
-    actual_result =  calculate_crew_size("Owen Garriott;Allen Bean;") #FIXME
-    expected_result = 2 #FIXME
+    actual_result = calculate_crew_size("Judith Resnik; Sally Ride;")
+    expected_result = 2
     assert actual_result == expected_result
+
+"""
+@pytest.mark.parametrize("input_value, expected_result", [
+    ("Valentina Tereshkova;", 1),
+    ("Judith Resnik; Sally Ride;", 2),
+])
+def test_calculate_crew_size2(input_value, expected_result):
+    ""
+    Test that calculate_crew_size returns expected ground truth values
+    for typical crew values
+    ""
+    actual_result = calculate_crew_size(input_value)
+    assert actual_result == expected_result
+"""
 
 # Edge cases
 def test_calculate_crew_size_edge_cases():
@@ -44,4 +55,5 @@ def test_calculate_crew_size_edge_cases():
 test_text_to_duration_float()
 test_text_to_duration_integer()
 test_calculate_crew_size()
+#test_calculate_crew_size2('input_value', 'expected_result')
 test_calculate_crew_size_edge_cases()
