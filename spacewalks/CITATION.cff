@@ -18,3 +18,7 @@ identifiers:
     value: 'https://github.com/kamwal/spacewalks'
 license: MIT
 date-released: '2024-11-28'
+identtifiers:
+  type: doi
+  value: 10.5072/zenodo.137897
+date-released: 2024-11-29
