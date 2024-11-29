@@ -29,7 +29,7 @@ def test_calculate_crew_size():
     expected_result = 2
     assert actual_result == expected_result
 
-"""
+
 @pytest.mark.parametrize("input_value, expected_result", [
     ("Valentina Tereshkova;", 1),
     ("Judith Resnik; Sally Ride;", 2),
@@ -41,7 +41,7 @@ def test_calculate_crew_size2(input_value, expected_result):
     ""
     actual_result = calculate_crew_size(input_value)
     assert actual_result == expected_result
-"""
+
 
 # Edge cases
 def test_calculate_crew_size_edge_cases():
